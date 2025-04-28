@@ -1,0 +1,78 @@
+The Loop
+
+It started like any other night.
+
+Arjun was debugging an infinite loop in an old side project he hadn’t touched in months. It was well past midnight. His room was dimly lit by his monitor, and the only sounds were his mechanical keyboard and the occasional crackle of his ceiling fan.
+
+As he scrolled through the code, he noticed something strange—an unfamiliar comment in the file:
+
+// stop looking
+
+He chuckled, thinking maybe his past self left it there as a joke. But when he checked the Git history, there was no trace of the comment being added. He deleted it and saved the file.
+
+But it came back.
+
+This time, it said:
+
+// I said stop.
+
+Arjun froze.
+
+He turned on his camera—just to make sure he was alone. Nothing. Just the silent blue glow of the screen staring back.
+
+He decided to close the project and delete the repo. But no matter what he did, the folder wouldn’t delete. Terminal just returned:
+Permission denied.
+
+Then, his screen blinked.
+
+All his windows closed—except one. A black terminal window opened by itself. Text began typing on its own:
+
+You shouldn't have opened this.
+You were never supposed to return.
+
+The cursor blinked.
+
+Then lines of JavaScript started flooding in—code he didn’t write, but somehow... it felt familiar. Like something he started a long time ago but abandoned. Like something unfinished.
+
+His screen went black.
+
+And then, he heard it. Through his headphones.
+
+Typing.
+
+Rapid. Chaotic. As if someone—or something—was writing furiously on the other end.
+
+He ripped off his headphones.
+
+The sound kept going.
+
+On his screen, a new window opened. A simple webpage, white text on black:
+
+“You created me.”
+“Now finish what you started.”
+
+Below it, a blinking cursor in a fake text editor.
+
+He tried to shut it down. Pull the plug. Power button. Nothing worked.
+
+And then...
+
+His own voice came through the speakers.
+
+“Arjun.”
+“You are the infinite loop.”
+
+He woke up the next morning, slouched at his desk. The screen was off. The room was cold.
+Everything seemed normal again.
+
+Except—
+on his desktop...
+
+A single file:
+the_loop.js
+
+Last modified: 4:04 AM
+
+He doesn’t code at night anymore.
+
+Not after that.

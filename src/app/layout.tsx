@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import { Rubik_Glitch } from "next/font/google";
-import "./globals.css";
+import { Rubik_Glitch, Share_Tech_Mono } from "next/font/google";
+import "@/styles/main.css";
+import { AppProvider } from "@/contexts/AppContext";
 
 const rubikGlitch = Rubik_Glitch({
   variable: "--font-rubik-glitch",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const shareTechMono = Share_Tech_Mono({
+  variable: "--font-share-tech-mono",
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -20,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubikGlitch.variable}`}>{children}</body>
+      <body className={`${rubikGlitch.variable} ${shareTechMono.variable}`}>
+        <AppProvider>{children}</AppProvider>
+      </body>
     </html>
   );
 }
