@@ -2,6 +2,8 @@
   --ff-primary: "Rubik Glitch", monospace;
   --ff-secondary: "Share Tech Mono", monospace;
 
+  --clr-accent: #10b981;
+
   --icon-size: 50px;
 }
 
@@ -16,6 +18,7 @@ body {
   color: #eee;
   font-family: var(--ff-secondary);
   position: relative;
+  line-height: 1.4;
 
   &::before {
     content: "";
@@ -27,7 +30,7 @@ body {
     background-image: url("/assets/background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.05;
+    opacity: 0.02;
     z-index: -1;
   }
 }
@@ -39,6 +42,17 @@ body {
   &:hover {
     animation: spinMe 1s forwards ease-out;
   }
+}
+
+.glitch-font {
+  font-family: var(--ff-primary);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.1;
 }
 
 img {
@@ -62,6 +76,115 @@ button {
   }
 }
 
+audio {
+  border: 4px solid var(--clr-accent);
+  height: max-content;
+  margin: 0 auto;
+
+  border-radius: 100vw;
+  width: min(400px, 100%);
+  background-color: transparent;
+
+  box-shadow: 0 0 1em 0.2em rgb(16, 185, 129, 0.25),
+    inset 0 0 1em 0.2em rgb(16, 185, 129, 0.25);
+}
+
+.subtitle {
+  font-family: var(--ff-primary);
+  font-size: 2rem;
+  color: rgb(209, 250, 229, 0.7);
+}
+
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2em;
+  padding-block: 2em;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 2em;
+}
+
+.section--play {
+  place-items: initial;
+  padding-block: 0;
+}
+
+.story {
+  padding-block: 2em;
+  display: grid;
+  gap: 3em;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.story__title {
+  font-size: 3rem;
+  font-family: var(--ff-primary);
+}
+
+.story__container {
+  position: relative;
+  width: min(100ch, 100%);
+  margin-inline: auto;
+  /* height: 70vh; */
+  overflow: hidden;
+}
+
+.story__scroll {
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  will-change: transform;
+  font-size: 1.5rem;
+}
+
+.story__gradient--top,
+.story__gradient--bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.story__gradient--top {
+  top: 0;
+  background: linear-gradient(to bottom, #0d0d0d, transparent);
+}
+
+.story__gradient--bottom {
+  bottom: 0;
+  background: linear-gradient(to top, #0d0d0d, transparent);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 0.5em;
+  border: 4px solid var(--clr-accent);
+  background-color: transparent;
+  padding: 0.5em 2em;
+  border-radius: 100vw;
+  text-decoration: none;
+  font-family: var(--ff-primary);
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+  box-shadow: 0 0 1em 0.2em rgb(16, 185, 129, 0.25),
+    inset 0 0 1em 0.2em rgb(16, 185, 129, 0.25);
+
+  & > img {
+    width: 1em;
+    aspect-ratio: 1 / 1;
+  }
+}
+
 .menu-button {
   background: none;
   border: none;
@@ -76,16 +199,60 @@ button {
   }
 }
 
+.timer {
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  font-weight: bold;
+  color: rgb(209, 250, 229, 0.1);
+  font-family: var(--ff-primary);
+  letter-spacing: 0.25em;
+  z-index: -1;
+}
+
+.footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(209, 250, 229, 0.5);
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s cubic-bezier(0, 0.6, 1, -0.96);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
 /* Reference: https://css-tricks.com/glitch-effect-text-images-svg/ */
 .glitch {
   color: white;
   font-size: 3rem;
   position: relative;
-  border: 1px solid green;
   width: 700px;
   margin: 0 auto;
   overflow-wrap: break-word;
   font-family: var(--ff-primary);
+}
+
+.glitch[data-size="lg"] {
+  font-size: 4rem;
+}
+
+.glitch[data-size="md"] {
+  font-size: 3rem;
+}
+
+.glitch[data-size="sm"] {
+  font-size: 2rem;
 }
 
 @keyframes noise-anim {

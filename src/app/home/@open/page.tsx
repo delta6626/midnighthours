@@ -1,13 +1,21 @@
+import { LinkButton } from "@/components/Button";
+import Footer from "@/components/Footer";
 import GlitchText from "@/components/GlitchText";
-import Header from "@/components/Header";
 
 export default function Open() {
   return (
     <>
-      <Header />
-      <GlitchText>Welcome to MidnightHours</GlitchText>
-
-      <h1>Hello world</h1>
+      <section className="section section--open">
+        <GlitchText size="lg" width="700px">
+          Welcome to MidnightHours
+        </GlitchText>
+        <h3>You can only access it once per day!</h3>
+        <LinkButton url={"/play"}>
+          <img src="/assets/play-icon.svg" alt="" />
+          <span>I'm ready</span>
+        </LinkButton>
+      </section>
+      <Footer />
     </>
   );
 }
