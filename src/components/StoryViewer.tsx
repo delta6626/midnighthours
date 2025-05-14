@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { pickTodayStory } from "@/utils";
+import { useJumpscare } from "@/hooks/useJumpscare";
+import Jumpscare from "./Jumpscare";
 
 export default function StoryViewer() {
   const [storyText, setStoryText] = useState<string[]>([]);
@@ -11,6 +13,8 @@ export default function StoryViewer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
+
+  const jumpscareTrigger = useJumpscare(audioDuration);
 
   useEffect(() => {
     const story = pickTodayStory();
@@ -87,6 +91,8 @@ export default function StoryViewer() {
           </audio>
         )}
       </div>
+
+      <Jumpscare trigger={jumpscareTrigger} />
     </div>
   );
 }

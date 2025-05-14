@@ -17,6 +17,7 @@ export default function Main({
   return (
     <>
       <Header />
+
       <Suspense fallback={<Loading />}>
         <main>{isSiteOpen ? open : closed}</main>
       </Suspense>
