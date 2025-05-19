@@ -1,9 +1,12 @@
+import { useAppContext } from "@/contexts/AppContext";
 import { useEffect, useState } from "react";
 
 export function useJumpscare(audioDuration: number) {
   const [trigger, setTrigger] = useState(false);
+  const { isScareMode } = useAppContext();
 
   useEffect(() => {
+    if (!isScareMode) return;
     if (!audioDuration || isNaN(audioDuration)) return;
 
     const triggerJumpscare = () => {

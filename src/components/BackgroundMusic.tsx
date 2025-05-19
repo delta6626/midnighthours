@@ -1,29 +1,30 @@
 "use client";
 
+import { useAppContext } from "@/contexts/AppContext";
 import { useEffect, useRef } from "react";
 
 export default function BackgroundMusic() {
+  const { isBackgroundMusicOn } = useAppContext();
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
+    if (!isBackgroundMusicOn) {
+      audio.pause();
+      return;
+    }
+
     audio.loop = true;
     audio.volume = 0.2;
 
-    const playAudio = () => {
-      audio.play().catch((err) => {
-        console.warn("Autoplay failed:", err);
-      });
-    };
-
-    document.addEventListener("click", playAudio, { once: true });
+    audio.play();
 
     return () => {
-      document.removeEventListener("click", playAudio);
+      audio.pause();
     };
-  }, []);
+  }, [isBackgroundMusicOn]);
 
   return (
     <audio

@@ -1,8 +1,15 @@
-import { LinkButton } from "@/components/Button";
+"use client";
+
+import { Button } from "@/components/Button";
+import CountdownTimer from "@/components/CountdownTimer";
 import Footer from "@/components/Footer";
 import GlitchText from "@/components/GlitchText";
 
 export default function Closed() {
+  const closeTab = () => {
+    window.location.href = "https://www.google.com";
+  };
+
   return (
     <>
       <section className="section section--closed">
@@ -12,12 +19,12 @@ export default function Closed() {
 
         <h3 className="subtitle">Come back at midnight.</h3>
 
-        <LinkButton url={"/goback"}>
+        <Button onClick={closeTab}>
           <img src="/assets/exit-icon.svg" alt="" />
           <span>Ok, I'm leaving</span>
-        </LinkButton>
+        </Button>
       </section>
-      <section className="timer">02:56:32</section>
+      <CountdownTimer />
       <Footer />
     </>
   );

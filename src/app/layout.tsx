@@ -29,8 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rubikGlitch.variable} ${shareTechMono.variable}`}>
-        <BackgroundMusic />
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          <BackgroundMusic />
+          {children}
+        </AppProvider>
       </body>
     </html>
   );

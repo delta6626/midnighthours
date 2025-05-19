@@ -8,6 +8,7 @@ type LinkButtonsProps = {
 
 type ButtonProps = {
   className?: string;
+  onClick: () => void;
   children: ReactNode;
 };
 
@@ -19,8 +20,12 @@ const LinkButton = ({ url, className, children }: LinkButtonsProps) => {
   );
 };
 
-const Button = ({ className, children }: ButtonProps) => {
-  return <button className={`button ${className}`}>{children}</button>;
+const Button = ({ className, onClick, children }: ButtonProps) => {
+  return (
+    <button className={`button ${className}`} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
-export { LinkButton };
+export { LinkButton, Button };

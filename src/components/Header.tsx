@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Menu from "./Menu";
 import Image from "next/image";
+import { useState } from "react";
+import Modal from "./Modal";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header>
+    <header className="header">
       <Link href="/home" className="logo">
         <Image
           src="/assets/pixel_clock.svg"
@@ -13,7 +17,9 @@ export default function Header() {
           height={50}
         />
       </Link>
-      <Menu />
+      <Menu onClick={() => setIsOpen(true)} />
+
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </header>
   );
 }
