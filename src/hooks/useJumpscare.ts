@@ -26,7 +26,7 @@ export function useJumpscare(audioDuration: number) {
     return () => {
       timeouts.forEach(clearTimeout);
     };
-  }, [audioDuration]);
+  }, [isScareMode, audioDuration]);
 
   return trigger;
 }

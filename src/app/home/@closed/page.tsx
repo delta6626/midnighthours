@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import CountdownTimer from "@/components/CountdownTimer";
 import Footer from "@/components/Footer";
 import GlitchText from "@/components/GlitchText";
+import Image from "next/image";
 
 export default function Closed() {
   const closeTab = () => {
@@ -20,8 +21,8 @@ export default function Closed() {
         <h3 className="subtitle">Come back at midnight.</h3>
 
         <Button onClick={closeTab}>
-          <img src="/assets/exit-icon.svg" alt="" />
-          <span>Ok, I'm leaving</span>
+          <Image src="/assets/exit-icon.svg" alt="" width={50} height={50} />
+          <span>Ok, I&apos;m leaving</span>
         </Button>
       </section>
       <CountdownTimer />

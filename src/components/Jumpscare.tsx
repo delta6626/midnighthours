@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Jumpscare({ trigger }: { trigger: boolean }) {
@@ -23,7 +24,7 @@ export default function Jumpscare({ trigger }: { trigger: boolean }) {
 
   return (
     <div className={`jumpscare ${visible ? "visible" : ""}`}>
-      <img src="/assets/clown.png" alt="Jumpscare" />
+      <Image src="/assets/clown.png" alt="Jumpscare" width={612} height={800} />
     </div>
   );
 }

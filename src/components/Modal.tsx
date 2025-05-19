@@ -1,6 +1,7 @@
 "use client";
 
 import { useAppContext } from "@/contexts/AppContext";
+import Image from "next/image";
 import { useEffect } from "react";
 
 type ModalProps = {
@@ -41,7 +42,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
             />
           </label>
           <label className="toggle" htmlFor="settings__scare-mode">
-            'Scare Me' mode:
+            &apos;Scare Me&apos; mode:
             <input
               type="checkbox"
               className="toggle__checkbox"
@@ -66,7 +67,12 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
             rel="noopener noreferrer"
           >
             <span>Contribute on</span>
-            <img src="/assets/github.svg" alt="GitHub" />
+            <Image
+              src="/assets/github.svg"
+              alt="GitHub"
+              width={50}
+              height={50}
+            />
           </a>
           <div className="modal__vertical-line"></div>
           <a
@@ -76,7 +82,12 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
             rel="noopener noreferrer"
           >
             <span>Support the project</span>
-            <img src="/assets/support.svg" alt="" />
+            <Image
+              src="/assets/support.svg"
+              alt="GitHub"
+              width={50}
+              height={50}
+            />
           </a>
         </div>
       </div>

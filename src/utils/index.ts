@@ -5,7 +5,7 @@ export const checkTimePeriod = () => {
   const currentHour = new Date().getHours();
 
   // Only open between 12 AM and 5 AM
-  return currentHour >= 0 && currentHour < 24;
+  return currentHour >= 0 && currentHour < 5;
 };
 
 export const pickTodayStory = () => {
