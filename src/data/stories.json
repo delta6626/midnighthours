@@ -3,5 +3,10 @@
     "title": "The Loop",
     "textFile": "the_loop.txt",
     "audioFile": "the_loop.mp3"
+  },
+  {
+    "title": "The Last Human Signal",
+    "textFile": "the_last_human_signal.txt",
+    "audioFile": "the_last_human_signal.mp3"
   }
 ]

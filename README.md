@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MidnightHours
 
-## Getting Started
+MidnightHours.site is a unique website that only works between 12:00 AM and 5:00 AM. You can access it once per day, and outside of that window, the site remains locked.
 
-First, run the development server:
+Each night, a random scary story is picked for everyone to experience together.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<div>
+<a href="https://www.youtube.com/@technoph1le" target="_blank">
+  <img src="https://img.shields.io/static/v1?label=&message=Watch%20on%20YouTube&labelColor=FFFFFF&color=FF0000&style=for-the-badge&logo=youtube&logoColor=FF0000" alt="Watch on YouTube">
+</a>
+<div>
+
+<br>
+
+![Website preview](/public/assets/preview.png)
+
+## How to Contribute
+
+First off, thanks for taking the time to contribute! ❤️
+
+- **Adding New Stories**: Share your favorite scary story to grow the database.
+- **Improving the Code**: Fix bugs, suggest new features, or optimize the project.
+
+### Adding New Stories
+
+1. Find your scary story (recommended length: 2-10 minutes)
+
+2. Add an audio (`.mp3`) and text (`.txt`) versions inside `/public/stories/ folder
+
+3. Update `/src/data/stories.json` in the following format:
+
+```json
+[
+  {
+    // other story...
+  },
+  {
+    "title": "Your story",
+    "textFile": "story_name.txt",
+    "audioFile": "story_name.mp3"
+  }
+]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Make sure the names in JSON file matches the ones you added in `/public/stories` folder.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Done. Your story will be randomly picked for everyone.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> If you're looking to convert your story to `.mp3`, you can use this awesome free tool: https://www.tetyys.com/SAPI4/
 
-## Learn More
+### Improving the Code
 
-To learn more about Next.js, take a look at the following resources:
+If you want to add a new feature or simply report a bug, feel free to create an issue here.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The website is built with NextJS (App Router).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
