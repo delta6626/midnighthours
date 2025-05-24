@@ -9,7 +9,8 @@ export default function Play() {
   const { isSiteOpen } = useAppContext();
 
   if (!isSiteOpen) {
-    redirect("/home");
+    console.log("Site isn't open");
+    // redirect("/home");
   }
 
   return (
