@@ -14,7 +14,7 @@ export default function Closed() {
   return (
     <>
       <section className="section section--closed">
-        <GlitchText size="lg" width="500px">
+        <GlitchText size="lg" width="720px">
           Site is closed!
         </GlitchText>
 

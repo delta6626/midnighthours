@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Link from "next/link";
 
 type LinkButtonsProps = {
   url: string;
@@ -14,9 +15,9 @@ type ButtonProps = {
 
 const LinkButton = ({ url, className, children }: LinkButtonsProps) => {
   return (
-    <a href={url} className={`button ${className}`}>
+    <Link href={url} className={`button ${className}`}>
       {children}
-    </a>
+    </Link>
   );
 };
 

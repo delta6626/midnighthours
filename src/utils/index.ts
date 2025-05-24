@@ -8,6 +8,12 @@ export const checkTimePeriod = () => {
   return currentHour >= 0 && currentHour < 5;
 };
 
+/**
+ * Picks a "story of the day" in a consistent way for all users.
+ * Uses today's date to generate a hash, then selects a story from the list based on that hash.
+ * This ensures everyone sees the same story each day, and the story changes daily.
+ * @returns today's story
+ */
 export const pickTodayStory = () => {
   const hashCode = (str: string) => {
     let hash = 0;

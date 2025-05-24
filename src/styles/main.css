@@ -114,7 +114,7 @@ audio {
 }
 
 .button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
@@ -147,10 +147,10 @@ audio {
 
 .timer {
   position: fixed;
-  bottom: 20%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 6rem;
+  font-size: clamp(4rem, 30vw, 12rem);
   font-weight: bold;
   color: rgb(209, 250, 229, 0.1);
   font-family: var(--ff-primary);
@@ -192,6 +192,12 @@ audio {
   place-items: center;
   text-align: center;
   gap: 2em;
+}
+
+.section--open {
+  min-height: 70vh;
+  place-content: center;
+  gap: 4em;
 }
 
 .section--play {
@@ -435,11 +441,11 @@ audio {
 }
 
 .glitch[data-size="lg"] {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .glitch[data-size="md"] {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .glitch[data-size="sm"] {
