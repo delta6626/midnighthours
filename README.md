@@ -1,6 +1,6 @@
 # MidnightHours
 
-MidnightHours.site is a unique website that only works between 12:00 AM and 5:00 AM. You can access it once per day, and outside of that window, the site remains locked.
+MidnightHours.site is a unique website that only works between 12:00 AM and 5:00 AM. You can access it once per day, and outside of that window, the site remains locked. 
 
 Each night, a random scary story is picked for everyone to experience together.
 
@@ -16,7 +16,7 @@ Each night, a random scary story is picked for everyone to experience together.
 
 ## How to Contribute
 
-First off, thanks for taking the time to contribute! ❤️
+First off, thanks for taking the time to contribute! ❤️ You can contribute by:
 
 - **Adding New Stories**: Share your favorite scary story to grow the database.
 - **Improving the Code**: Fix bugs, suggest new features, or optimize the project.
@@ -31,8 +31,8 @@ First off, thanks for taking the time to contribute! ❤️
 
 ```json
 [
-  {
-    // other story...
+  { 
+    // other stories...
   },
   {
     "title": "Your story",
@@ -42,15 +42,15 @@ First off, thanks for taking the time to contribute! ❤️
 ]
 ```
 
-> Make sure the names in JSON file matches the ones you added in `/public/stories` folder.
+Make sure the names in JSON file matches the ones you added in `/public/stories` folder.
 
 4. Done. Your story will be randomly picked for everyone.
 
-> If you're looking to convert your story to `.mp3`, you can use this awesome free tool: https://www.tetyys.com/SAPI4/
+> If you're looking to convert your story to `.mp3`, you can use this **awesome free tool**: https://www.tetyys.com/SAPI4/
 
 ### Improving the Code
 
-If you want to add a new feature or simply report a bug, feel free to create an issue here.
+If you want to add a new feature or simply report a bug, feel free to [create an issue](https://github.com/technoph1le/midnighthours/issues/new).
 
 The website is built with NextJS (App Router).
 
