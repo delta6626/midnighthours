@@ -3,7 +3,7 @@
 import Header from "@/components/Header";
 import StoryViewer from "@/components/StoryViewer";
 import { useAppContext } from "@/contexts/AppContext";
-import { redirect } from "next/navigation";
+// import { redirect } from "next/navigation";
 
 export default function Play() {
   const { isSiteOpen } = useAppContext();
