@@ -1,16 +1,24 @@
 "use client";
 
+import { redirect } from "next/navigation";
+
 import Header from "@/components/Header";
 import StoryViewer from "@/components/StoryViewer";
 import { useAppContext } from "@/contexts/AppContext";
-import { redirect } from "next/navigation";
+import { checkTimePeriod } from "@/utils";
+import { useEffect } from "react";
 
 export default function Play() {
-  const { isSiteOpen } = useAppContext();
+  const { setIsSiteOpen } = useAppContext();
 
-  if (!isSiteOpen) {
-    redirect("/home");
-  }
+  useEffect(() => {
+    const isSiteOpen = checkTimePeriod();
+    setIsSiteOpen(isSiteOpen);
+
+    if (!isSiteOpen) {
+      redirect("/home");
+    }
+  }, []);
 
   return (
     <>
