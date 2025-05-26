@@ -1,6 +1,6 @@
 # MidnightHours
 
-MidnightHours.site is a unique website that only works between 12:00 AM and 5:00 AM. You can access it once per day, and outside of that window, the site remains locked. 
+MidnightHours.site is a unique website that only works between 12:00 AM and 5:00 AM. You can access it once per day, and outside of that window, the site remains locked.
 
 Each night, a random scary story is picked for everyone to experience together.
 
@@ -23,18 +23,28 @@ First off, thanks for taking the time to contribute! ❤️ You can contribute b
 
 ### Adding New Stories
 
-1. Find your scary story (recommended length: 2-10 minutes)
+1. Find your scary story (recommended length: 2–10 minutes)
 
-2. Add an audio (`.mp3`) and text (`.txt`) versions inside `/public/stories/ folder
+2. Prepare a text file (story_name.txt) and an audio file (story_name.mp3)
 
-3. Update `/src/data/stories.json` in the following format:
+3. Create a new folder with the name of your story inside /public/stories/
+
+```
+   /public/stories/
+              └── story_name/
+                      ├── story_name.txt
+                      └── story_name.mp3
+```
+
+4. Update `/src/data/stories.json` in the following format:
 
 ```json
 [
-  { 
+  {
     // other stories...
   },
   {
+    "directory": "story_name",
     "title": "Your story",
     "textFile": "story_name.txt",
     "audioFile": "story_name.mp3"
@@ -42,9 +52,7 @@ First off, thanks for taking the time to contribute! ❤️ You can contribute b
 ]
 ```
 
-Make sure the names in JSON file matches the ones you added in `/public/stories` folder.
-
-4. Done. Your story will be randomly picked for everyone.
+5. Done! Your story will be randomly selected and shared with everyone.
 
 > If you're looking to convert your story to `.mp3`, you can use this **awesome free tool**: https://www.tetyys.com/SAPI4/
 
@@ -53,5 +61,3 @@ Make sure the names in JSON file matches the ones you added in `/public/stories`
 If you want to add a new feature or simply report a bug, feel free to [create an issue](https://github.com/technoph1le/midnighthours/issues/new).
 
 The website is built with NextJS (App Router).
-
-
