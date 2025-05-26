@@ -1,4 +1,5 @@
 export type StoryType = {
+  directory: string;
   title: string;
   textFile: string;
   audioFile: string;
