@@ -19,7 +19,7 @@ export default function StoryViewer() {
   useEffect(() => {
     const story = pickTodayStory();
 
-    fetch(`/stories/${story.textFile}`)
+    fetch(`/stories/${story.directory}/${story.textFile}`)
       .then((res) => res.text())
       .then((text) => {
         const paragraphs = text
@@ -29,7 +29,7 @@ export default function StoryViewer() {
         setStoryText(paragraphs);
       });
 
-    setAudioSrc(`/stories/${story.audioFile}`);
+    setAudioSrc(`/stories/${story.directory}/${story.audioFile}`);
   }, []);
 
   useEffect(() => {

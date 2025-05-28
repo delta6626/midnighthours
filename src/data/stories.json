@@ -1,20 +1,24 @@
 [
   {
+    "directory": "the_loop",
     "title": "The Loop",
     "textFile": "the_loop.txt",
     "audioFile": "the_loop.mp3"
   },
   {
+    "directory": "the_last_human_signal",
     "title": "The Last Human Signal",
     "textFile": "the_last_human_signal.txt",
     "audioFile": "the_last_human_signal.mp3"
   },
   {
+    "directory": "every_time_you_sleep",
     "title": "Every Time You Sleep...",
     "textFile": "everytime_you_sleep.txt",
     "audioFile": "everytime_you_sleep.mp3"
   },
   {
+    "directory": "someone_in_your_photos",
     "title": "Someone's in Your Photos...",
     "textFile": "someone_in_your_photos.txt",
     "audioFile": "someone_in_your_photos.mp3"
